@@ -1,0 +1,17 @@
+Tables Used in Postgres
+
+1 . appointment_details
+
+columns				datatype	constraint
+ appointment_date 		 date            
+ appointment_counter_flag        boolean
+ id                              bigint          Primary Key
+
+
+2 . fix_appointment_details
+
+
+columns				datatype			constraint
+ id				 integer	 	 	 foreign key references appointment_details(id)
+ start_time			 time without time zone
+ end_time			 time without time zone	 
